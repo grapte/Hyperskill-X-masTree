@@ -1,0 +1,59 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>You have decided to write a generator of Christmas cards stylized as old graphics consisting of ASCII characters, but you have to start somewhere. Try to draw a Christmas tree consisting only of stars.</p>
+<p style="text-align: center;"><picture><source media="(max-width: 480px)" srcset="https://ucarecdn.com/bb9e0d0b-319a-46d8-9dcc-9059b5e6df01/-/stretch/off/-/resize/480x/-/format/webp/ 1x,https://ucarecdn.com/bb9e0d0b-319a-46d8-9dcc-9059b5e6df01/-/stretch/off/-/resize/960x/-/format/webp/ 2x,https://ucarecdn.com/bb9e0d0b-319a-46d8-9dcc-9059b5e6df01/-/stretch/off/-/resize/1440x/-/format/webp/ 3x" type="image/webp"/><source media="(max-width: 800px)" srcset="https://ucarecdn.com/bb9e0d0b-319a-46d8-9dcc-9059b5e6df01/-/stretch/off/-/resize/800x/-/format/webp/ 1x,https://ucarecdn.com/bb9e0d0b-319a-46d8-9dcc-9059b5e6df01/-/stretch/off/-/resize/1600x/-/format/webp/ 2x,https://ucarecdn.com/bb9e0d0b-319a-46d8-9dcc-9059b5e6df01/-/stretch/off/-/resize/2400x/-/format/webp/ 3x" type="image/webp"/><source srcset="https://ucarecdn.com/bb9e0d0b-319a-46d8-9dcc-9059b5e6df01/-/stretch/off/-/resize/1100x/-/format/webp/ 1x,https://ucarecdn.com/bb9e0d0b-319a-46d8-9dcc-9059b5e6df01/-/stretch/off/-/resize/2200x/-/format/webp/ 2x,https://ucarecdn.com/bb9e0d0b-319a-46d8-9dcc-9059b5e6df01/-/stretch/off/-/resize/3000x/-/format/webp/ 3x" type="image/webp"/><img alt="Old style Christmas tree" height="600" name="DALL·E 2023-12-28 12.50.15 - Realistic illustration of a Christmas tree in an old style, tailored for millennials. The tree should have a nostalgic and authentic appearance, remin.png" src="https://ucarecdn.com/bb9e0d0b-319a-46d8-9dcc-9059b5e6df01/" width="600"/></picture></p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>Write a script that asks for the height of the Christmas tree Y.</li>
+<li>Draw a Christmas tree with height Y.</li>
+<li>The top of the Christmas tree is one character <code class="java">*</code>.</li>
+<li>Each lower level equals the higher level, with one star added to the left and one to the right.</li>
+<li>The lowest possible Christmas tree will have 3 levels.</li>
+<li>For a height of 3, it should look like this (the numbers on the X and Y axes are for illustrative purposes only):</li>
+</ol>
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 200px;">
+<tbody>
+<tr>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"><strong>*</strong></td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"><strong>*</strong></td>
+<td style="text-align: center;"><strong>*</strong></td>
+<td style="text-align: center;"><strong>*</strong></td>
+<td style="text-align: center;"> </td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><strong>*</strong></td>
+<td style="text-align: center;"><strong>*</strong></td>
+<td style="text-align: center;"><strong>*</strong></td>
+<td style="text-align: center;"><strong>*</strong></td>
+<td style="text-align: center;"><strong>*</strong></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;"> </p>
+<h5 id="examples">Examples</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><strong>Example 1: </strong><em>14 lines</em></p>
+<p>&gt; 14<br/>
+<picture><source media="(max-width: 480px)" srcset="https://ucarecdn.com/580e5e6f-75a2-4b71-8714-fc364de556cc/-/stretch/off/-/resize/480x/-/format/webp/ 1x,https://ucarecdn.com/580e5e6f-75a2-4b71-8714-fc364de556cc/-/stretch/off/-/resize/960x/-/format/webp/ 2x,https://ucarecdn.com/580e5e6f-75a2-4b71-8714-fc364de556cc/-/stretch/off/-/resize/1440x/-/format/webp/ 3x" type="image/webp"/><source media="(max-width: 800px)" srcset="https://ucarecdn.com/580e5e6f-75a2-4b71-8714-fc364de556cc/-/stretch/off/-/resize/800x/-/format/webp/ 1x,https://ucarecdn.com/580e5e6f-75a2-4b71-8714-fc364de556cc/-/stretch/off/-/resize/1600x/-/format/webp/ 2x,https://ucarecdn.com/580e5e6f-75a2-4b71-8714-fc364de556cc/-/stretch/off/-/resize/2400x/-/format/webp/ 3x" type="image/webp"/><source srcset="https://ucarecdn.com/580e5e6f-75a2-4b71-8714-fc364de556cc/-/stretch/off/-/resize/1100x/-/format/webp/ 1x,https://ucarecdn.com/580e5e6f-75a2-4b71-8714-fc364de556cc/-/stretch/off/-/resize/2200x/-/format/webp/ 2x,https://ucarecdn.com/580e5e6f-75a2-4b71-8714-fc364de556cc/-/stretch/off/-/resize/3000x/-/format/webp/ 3x" type="image/webp"/><img alt="" height="318" name="image.png" src="https://ucarecdn.com/580e5e6f-75a2-4b71-8714-fc364de556cc/" width="237"/></picture></p>
+<p><strong>Example 2: </strong><em>7 lines</em></p>
+<p>&gt; 7</p>
+<p><picture><source media="(max-width: 480px)" srcset="https://ucarecdn.com/4fc1be7b-b247-4be0-83a3-67c4699ba041/-/stretch/off/-/resize/480x/-/format/webp/ 1x,https://ucarecdn.com/4fc1be7b-b247-4be0-83a3-67c4699ba041/-/stretch/off/-/resize/960x/-/format/webp/ 2x,https://ucarecdn.com/4fc1be7b-b247-4be0-83a3-67c4699ba041/-/stretch/off/-/resize/1440x/-/format/webp/ 3x" type="image/webp"/><source media="(max-width: 800px)" srcset="https://ucarecdn.com/4fc1be7b-b247-4be0-83a3-67c4699ba041/-/stretch/off/-/resize/800x/-/format/webp/ 1x,https://ucarecdn.com/4fc1be7b-b247-4be0-83a3-67c4699ba041/-/stretch/off/-/resize/1600x/-/format/webp/ 2x,https://ucarecdn.com/4fc1be7b-b247-4be0-83a3-67c4699ba041/-/stretch/off/-/resize/2400x/-/format/webp/ 3x" type="image/webp"/><source srcset="https://ucarecdn.com/4fc1be7b-b247-4be0-83a3-67c4699ba041/-/stretch/off/-/resize/1100x/-/format/webp/ 1x,https://ucarecdn.com/4fc1be7b-b247-4be0-83a3-67c4699ba041/-/stretch/off/-/resize/2200x/-/format/webp/ 2x,https://ucarecdn.com/4fc1be7b-b247-4be0-83a3-67c4699ba041/-/stretch/off/-/resize/3000x/-/format/webp/ 3x" type="image/webp"/><img alt="" height="151" name="image.png" src="https://ucarecdn.com/4fc1be7b-b247-4be0-83a3-67c4699ba041/" width="130"/></picture></p>
+</div>

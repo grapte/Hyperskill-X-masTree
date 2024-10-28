@@ -1,0 +1,319 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>There's only one thing missing from the Christmas tree — decorations. We will try to place Christmas trinkets on it. But to make it more realistic, we will put them in different configurations.</p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>In the input, in addition to the height of the Christmas tree, we also provide the interval at which the decorations appear after one space. The interval must always be greater than <code class="java">0</code>.</li>
+<li>Decorations <code class="java">O</code> can only be placed in places marked with numbers. Each subsequent level will have one more decoration. For example, let's take the height of a Christmas tree is 5.</li>
+</ol>
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 200px;">
+<tbody>
+<tr>
+<td> </td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>0</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>X</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>^</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>2</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>/</td>
+<td>*</td>
+<td>\</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>3</td>
+<td> </td>
+<td> </td>
+<td>/</td>
+<td>*</td>
+<td>1</td>
+<td>*</td>
+<td>\</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>4</td>
+<td> </td>
+<td>/</td>
+<td>*</td>
+<td>2</td>
+<td>*</td>
+<td>3</td>
+<td>*</td>
+<td>\</td>
+<td> </td>
+</tr>
+<tr>
+<td>5</td>
+<td>/</td>
+<td>*</td>
+<td>4</td>
+<td>*</td>
+<td>5</td>
+<td>*</td>
+<td>6</td>
+<td>*</td>
+<td>\</td>
+</tr>
+<tr>
+<td>6</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>|</td>
+<td> </td>
+<td>|</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p>If the interval is 1, Christmas decorations should appear in all places marked with numbers:</p>
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 200px;">
+<tbody>
+<tr>
+<td> </td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>0</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>X</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>^</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>2</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>/</td>
+<td>*</td>
+<td>\</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>3</td>
+<td> </td>
+<td> </td>
+<td>/</td>
+<td>*</td>
+<td>O</td>
+<td>*</td>
+<td>\</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>4</td>
+<td> </td>
+<td>/</td>
+<td>*</td>
+<td>O</td>
+<td>*</td>
+<td>O</td>
+<td>*</td>
+<td>\</td>
+<td> </td>
+</tr>
+<tr>
+<td>5</td>
+<td>/</td>
+<td>*</td>
+<td>O</td>
+<td>*</td>
+<td>O</td>
+<td>*</td>
+<td>O</td>
+<td>*</td>
+<td>\</td>
+</tr>
+<tr>
+<td>6</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>|</td>
+<td> </td>
+<td>|</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p>With the interval of 3, the decoration should appear every three places, in other words, in places marked 1, 4.</p>
+<table align="center" border="1" cellpadding="1" cellspacing="1" style="width: 200px;">
+<tbody>
+<tr>
+<td> </td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>0</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>X</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>1</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>^</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>2</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>/</td>
+<td>*</td>
+<td>\</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>3</td>
+<td> </td>
+<td> </td>
+<td>/</td>
+<td>*</td>
+<td>O</td>
+<td>*</td>
+<td>\</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>4</td>
+<td> </td>
+<td>/</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>\</td>
+<td> </td>
+</tr>
+<tr>
+<td>5</td>
+<td>/</td>
+<td>*</td>
+<td>O</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>\</td>
+</tr>
+<tr>
+<td>6</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td>|</td>
+<td> </td>
+<td>|</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<h5 id="examples">Examples</h5>
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+<p><strong>Example 1: </strong></p>
+<pre><code class="java">&gt; 14 6</code></pre>
+<p><picture><source media="(max-width: 480px)" srcset="https://ucarecdn.com/9aaef7ea-a766-464b-a122-a7e4a06aefdd/-/stretch/off/-/resize/480x/-/format/webp/ 1x,https://ucarecdn.com/9aaef7ea-a766-464b-a122-a7e4a06aefdd/-/stretch/off/-/resize/960x/-/format/webp/ 2x,https://ucarecdn.com/9aaef7ea-a766-464b-a122-a7e4a06aefdd/-/stretch/off/-/resize/1440x/-/format/webp/ 3x" type="image/webp"/><source media="(max-width: 800px)" srcset="https://ucarecdn.com/9aaef7ea-a766-464b-a122-a7e4a06aefdd/-/stretch/off/-/resize/800x/-/format/webp/ 1x,https://ucarecdn.com/9aaef7ea-a766-464b-a122-a7e4a06aefdd/-/stretch/off/-/resize/1600x/-/format/webp/ 2x,https://ucarecdn.com/9aaef7ea-a766-464b-a122-a7e4a06aefdd/-/stretch/off/-/resize/2400x/-/format/webp/ 3x" type="image/webp"/><source srcset="https://ucarecdn.com/9aaef7ea-a766-464b-a122-a7e4a06aefdd/-/stretch/off/-/resize/1100x/-/format/webp/ 1x,https://ucarecdn.com/9aaef7ea-a766-464b-a122-a7e4a06aefdd/-/stretch/off/-/resize/2200x/-/format/webp/ 2x,https://ucarecdn.com/9aaef7ea-a766-464b-a122-a7e4a06aefdd/-/stretch/off/-/resize/3000x/-/format/webp/ 3x" type="image/webp"/><img alt="" height="360" name="image.png" src="https://ucarecdn.com/9aaef7ea-a766-464b-a122-a7e4a06aefdd/" width="233"/></picture></p>
+<p><strong>Example 2: </strong></p>
+<pre><code class="java">&gt;7 2</code></pre>
+<p><picture><source media="(max-width: 480px)" srcset="https://ucarecdn.com/38379ce2-c765-4331-ac51-025b379df8a2/-/stretch/off/-/resize/480x/-/format/webp/ 1x,https://ucarecdn.com/38379ce2-c765-4331-ac51-025b379df8a2/-/stretch/off/-/resize/960x/-/format/webp/ 2x,https://ucarecdn.com/38379ce2-c765-4331-ac51-025b379df8a2/-/stretch/off/-/resize/1440x/-/format/webp/ 3x" type="image/webp"/><source media="(max-width: 800px)" srcset="https://ucarecdn.com/38379ce2-c765-4331-ac51-025b379df8a2/-/stretch/off/-/resize/800x/-/format/webp/ 1x,https://ucarecdn.com/38379ce2-c765-4331-ac51-025b379df8a2/-/stretch/off/-/resize/1600x/-/format/webp/ 2x,https://ucarecdn.com/38379ce2-c765-4331-ac51-025b379df8a2/-/stretch/off/-/resize/2400x/-/format/webp/ 3x" type="image/webp"/><source srcset="https://ucarecdn.com/38379ce2-c765-4331-ac51-025b379df8a2/-/stretch/off/-/resize/1100x/-/format/webp/ 1x,https://ucarecdn.com/38379ce2-c765-4331-ac51-025b379df8a2/-/stretch/off/-/resize/2200x/-/format/webp/ 2x,https://ucarecdn.com/38379ce2-c765-4331-ac51-025b379df8a2/-/stretch/off/-/resize/3000x/-/format/webp/ 3x" type="image/webp"/><img alt="" height="202" name="image.png" src="https://ucarecdn.com/38379ce2-c765-4331-ac51-025b379df8a2/" width="112"/></picture></p>
+</div>
